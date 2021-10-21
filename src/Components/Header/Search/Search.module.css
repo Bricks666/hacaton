@@ -1,50 +1,54 @@
 /* SEARCH */
 .search {
-  display: flex;
-}
+	display: grid;
+	grid-template-columns: auto min-content;
+	column-gap: 10px;
 
-@keyframes show {
-  from {
-    transform: scaleX(0)
-  }
-  to {
-    transform: scaleX(1);
-  }
+	background-color: inherit;
 }
 
 /* FIELD */
-.field {
-  width: 200px;
+.fieldBlock {
+	width: 200px;
 
-  transform-origin: right center;
-  transform: scaleX(0);
+	transform-origin: right center;
+	transform: scaleX(0);
+
+	transition-property: transform;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+.field {
+	border: none;
+	border-bottom: 2px solid black;
+
+	border-radius: 0;
 }
 
 .showField {
-  animation-name: show;
-  animation-timing-function: linear;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+	transform: scaleX(1);
 }
 
 /* BUTTON */
 .button {
-  width: 28px;
-  height: 28px;
+	width: 28px;
+	height: 28px;
 
-  padding: 0;
+	padding: 0;
 
-  border-radius: 50%;
+	border-radius: 50%;
 
-  background-image: url("./MagnifyingGlass.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 26px 26px;
-  border: none;
+  background-color: inherit;
+	background-image: url("./MagnifyingGlass.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 26px 26px;
+
+	border: none;
 }
 
 .button:hover,
 .button:focus-visible,
 .button:active {
-  border: 2px solid grey;
+	border: 2px solid grey;
 }

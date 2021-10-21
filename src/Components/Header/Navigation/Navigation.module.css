@@ -23,6 +23,7 @@
 }
 
 /* SUB NAV */
+
 .subNav {
   position: absolute;
 
@@ -30,34 +31,35 @@
 
   display: grid;
   grid-template-columns: 150px;
+  grid-template-columns: minmax(min-content, 200px);
 
 
   margin: 0;
   padding: 5px;
-
   list-style: none;
-
   border: 2px solid grey;
-
   transform: scaleY(0);
   transform-origin: top center;
   transition: ease-in 0.25s;
 }
-
 .item:hover .subNav {
   transform: scaleY(1);
 }
 
 .subNavItem {
-  overflow-x: hidden;
-  word-wrap: break-word;
+  text-overflow: ellipsis;
 }
 
 /* LINK */
 .link {
+  display: inline-block;
+  width: 100%;
+
   text-decoration: none;
 
   color: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .link:hover {

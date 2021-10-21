@@ -1,13 +1,15 @@
-import { Navigation } from "./Navigation/Navigation"
-import { Picture } from "../Shared/Picture/Picture"
+import { Navigation } from "./Navigation/Navigation";
+import { Logo } from "./Logo/Logo";
+import { Search } from "./Search/Search";
 
 import HeaderStyle from "./Header.module.css";
 
 export const Header = (props) => {
-  return (
-    <header className={HeaderStyle.header}>
-      <Picture className={HeaderStyle.picture} src="/"/>
-      <Navigation className={HeaderStyle.nav} />
-    </header>
-  )
-}
+	return (
+		<header className={HeaderStyle.header}>
+			<Logo className={HeaderStyle.picture} />
+			<Navigation className={HeaderStyle.nav} />
+			<Search />
+		</header>
+	);
+};
