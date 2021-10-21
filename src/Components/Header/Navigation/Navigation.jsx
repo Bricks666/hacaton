@@ -1,34 +1,44 @@
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
+
+import NavStyle from "./Navigation.module.css";
 
 const SubNavigation = (props) => {
   return (
-    <ul>
+    <ul className={props.className}>
       {props.children}
     </ul>
   )
 }
 
+const SubNavItem = (props) => {
+  return (
+    <li className={props.className}>
+      <Link className={NavStyle.link} to={props.to}>{props.children}</Link>
+    </li>
+  )
+}
+
 export const Navigation = (props) => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <NavLink to="/" >Домой</NavLink>
+    <nav className={`${props.className ?? ""}`}>
+      <ul className={NavStyle.list}>
+        <li className={NavStyle.item}>
+          <Link className={NavStyle.link} to="/" >Домой</Link>
         </li>
-        <li>
+        <li className={NavStyle.item}>
           Что делать
-          <SubNavigation>
-            <li><NavLink to="/">Что то</NavLink></li>
-            <li><NavLink to="/">Еще что то</NavLink></li>
-            <li><NavLink to="/">А потом и по чаю</NavLink></li>
+          <SubNavigation className={NavStyle.subNav}>
+            <SubNavItem className={NavStyle.subNavItem} to="/">Что то</SubNavItem>
+            <SubNavItem className={NavStyle.subNavItem} to="/">Что то too</SubNavItem>
+            <SubNavItem className={NavStyle.subNavItem} to="/">Иное</SubNavItem>
           </SubNavigation>
         </li>
-        <li>
+        <li className={NavStyle.item}>
           Чем заняться
-          <SubNavigation>
-            <li><NavLink to="/">Можно почитать</NavLink></li>
-            <li><NavLink to="/">Поиграть</NavLink></li>
-            <li><NavLink to="/">Поплакать(Очень рекомендуем)</NavLink></li>
+          <SubNavigation className={NavStyle.subNav}>
+          <SubNavItem className={NavStyle.subNavItem} to="/">Можно почитать</SubNavItem>
+          <SubNavItem className={NavStyle.subNavItem} to="/">Можно поиграть</SubNavItem>
+          <SubNavItem className={NavStyle.subNavItem} to="/">Можно поплакать(Очень рекомендую)</SubNavItem>
           </SubNavigation>
         </li>
       </ul>
