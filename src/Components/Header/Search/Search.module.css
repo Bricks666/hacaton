@@ -1,0 +1,50 @@
+/* SEARCH */
+.search {
+  display: flex;
+}
+
+@keyframes show {
+  from {
+    transform: scaleX(0)
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* FIELD */
+.field {
+  width: 200px;
+
+  transform-origin: right center;
+  transform: scaleX(0);
+}
+
+.showField {
+  animation-name: show;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+/* BUTTON */
+.button {
+  width: 28px;
+  height: 28px;
+
+  padding: 0;
+
+  border-radius: 50%;
+
+  background-image: url("./MagnifyingGlass.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px 26px;
+  border: none;
+}
+
+.button:hover,
+.button:focus-visible,
+.button:active {
+  border: 2px solid grey;
+}

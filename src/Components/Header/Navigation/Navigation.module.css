@@ -26,10 +26,8 @@
 .subNav {
   position: absolute;
 
-  left: 4px;
-
   display: grid;
-  grid-template-columns: 150px;
+  grid-template-columns: minmax(min-content, 200px);
 
 
   margin: 0;
@@ -49,15 +47,19 @@
 }
 
 .subNavItem {
-  overflow-x: hidden;
-  word-wrap: break-word;
+
 }
 
 /* LINK */
 .link {
+  display: inline-block;
+  width: 100%;
+
   text-decoration: none;
 
   color: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .link:hover {
