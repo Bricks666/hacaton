@@ -39,6 +39,20 @@ export const Navigation = (props) => {
 						</SubNavItem>
 					</SubNavigation>
 				</li>
+        <li className={NavStyle.item}>
+					Кто виноват
+					<SubNavigation className={NavStyle.subNav}>
+						<SubNavItem className={NavStyle.subNavItem} to="/">
+							Ты
+						</SubNavItem>
+						<SubNavItem className={NavStyle.subNavItem} to="/">
+							Ты
+						</SubNavItem>
+						<SubNavItem className={NavStyle.subNavItem} to="/">
+							Конечно не я
+						</SubNavItem>
+					</SubNavigation>
+				</li>
 			</ul>
 		</nav>
 	);

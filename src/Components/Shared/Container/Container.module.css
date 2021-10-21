@@ -1,0 +1,21 @@
+/* CONTAINER */
+.container {
+	width: 1440px;
+
+  position: inherit;
+
+	display: inherit;
+	justify-content: inherit;
+	justify-self: inherit;
+	align-items: inherit;
+	align-self: inherit;
+	grid-template-columns: inherit;
+	grid-row: inherit;
+	grid-template-rows: inherit;
+	grid-area: inherit;
+	row-gap: inherit;
+	column-gap: inherit;
+
+	margin: 0 auto;
+	padding: 0;
+}

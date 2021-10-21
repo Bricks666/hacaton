@@ -1,7 +1,6 @@
 import FieldStyle from "./Field.module.css";
 
 export const Field = (props) => {
-	console.log(props, "FIELD");
 	return (
 		<label className={`${FieldStyle.label} ${props.className ?? ""}`}>
 			{props.children}
@@ -9,7 +8,7 @@ export const Field = (props) => {
 				{...props.input}
 				className={`${FieldStyle.field} ${props.fieldClass}`}
 				placeholder={props.placeholder}
-				autoFocus={props.meta.active}
+				autoFocus={props.focus}
 			/>
 		</label>
 	);

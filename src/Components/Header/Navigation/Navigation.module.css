@@ -1,67 +1,78 @@
 /* NAV */
 .list {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	column-gap: 20px;
 
-  width: 300px;
+	margin: 0;
+	padding: 10px 15px;
 
-  margin: 0;
-  padding: 10px 15px;
+	list-style: none;
 
-  list-style: none;
+	background-color: inherit;
 }
 
 /* ITEM */
 .item {
-  position: relative;
+	position: relative;
 
-  font-size: 16px;
-  font-weight: 500;
+	width: max-content;
+
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 0.9em;
 }
 .item:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* SUB NAV */
 
 .subNav {
-  position: absolute;
+	position: absolute;
 
-  left: 4px;
+	display: grid;
+	grid-template-columns: 150px;
+	grid-template-columns: minmax(min-content, 200px);
 
-  display: grid;
-  grid-template-columns: 150px;
-  grid-template-columns: minmax(min-content, 200px);
+	row-gap: 10px;
 
+	margin: 0;
+	padding: 10px 5px;
 
-  margin: 0;
-  padding: 5px;
-  list-style: none;
-  border: 2px solid grey;
-  transform: scaleY(0);
-  transform-origin: top center;
-  transition: ease-in 0.25s;
+	background-color: var(--grey);
+
+	list-style: none;
+
+	border: 2px solid black;
+
+	transform: scaleY(0);
+	transform-origin: top center;
+
+	transition: ease-in 0.25s;
 }
 .item:hover .subNav {
-  transform: scaleY(1);
+	transform: scaleY(1);
 }
 
 .subNavItem {
-  text-overflow: ellipsis;
+	text-overflow: ellipsis;
+
+	font-size: 18px;
+	line-height: 0.8em;
 }
 
 /* LINK */
 .link {
-  display: inline-block;
-  width: 100%;
+	display: inline-block;
+	width: 100%;
 
-  text-decoration: none;
+	text-decoration: none;
 
-  color: inherit;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+	color: inherit;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .link:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }

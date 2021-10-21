@@ -1,7 +1,11 @@
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+
+	--grey: #d8d8d8;
 }
 
 ul {
-  padding: 0;
+	padding: 0;
 }

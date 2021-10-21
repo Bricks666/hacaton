@@ -1,24 +1,42 @@
 /* HEADER */
 .header {
-  display: flex;
+	display: grid;
 
-  justify-content: space-between;
-  align-items: center;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	row-gap: 10px;
 
-  padding: 20px;
-  margin: 0;
+	margin: 0;
 
-  background-color: #D8D8D8;
+	background-color: var(--grey);
+}
+
+/* CONTAINER */
+.container {
+	grid-row: 1 / -1;
+	grid-column: 1 / -1;
 }
 
 /* PICTURE */
 
 .picture {
-  width: 150px;
-  height: 50px;
+	width: 150px;
+	height: 50px;
 }
 
 /* NAV */
 .nav {
-  margin-right: 100px;
+	max-width: min-content;
+}
+
+/* SEARCH */
+.search {
+	justify-self: end;
+	max-width: max-content;
+}
+
+/* HEADER ABOUT */
+.headerAbout {
+	grid-row: 2;
+	grid-column: 1 / -1;
 }

@@ -1,40 +1,43 @@
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
-    grid-auto-rows: minmax(300px, auto);
-    justify-content: center;
-    grid-gap: 30px;
-    margin: 20px;
+	display: grid;
+
+	grid-template-columns: repeat(3, 300px);
+	grid-auto-rows: minmax(300px, auto);
+	grid-auto-flow: row dense;
+	justify-content: center;
+
+	grid-gap: 30px;
+
+	padding: 20px;
+	margin: 0;
 }
 
-.MyCard {
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 16px;
-    box-shadow: 2px 2px 8px #000;
+/* HEADER */
+.header {
+	text-align: center;
+	font-size: 60px;
+	line-height: 1.2em;
+	font-weight: 400;
 }
 
-.MyCard:hover {
-    box-shadow: 2px 2px 15px #000;
-    background: #2a289e;
-    cursor: pointer;
-}
+/* MORE */
+.more {
 
-.MyCardDescription {
-    background: rgba(0,0,0, 0.5);
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding-top: 45%;
-    color: inherit;
-    font-size: 24px;
-    text-decoration: none;
-    text-transform: uppercase;
-    opacity: 0;
-}
+  display: block;
 
-.MyCardDescription:hover {
-    opacity: 1;
+	margin-left: auto;
+	padding: 10px 20px;
+
+  max-width: max-content;
+
+	background-image: linear-gradient(
+		93.75deg,
+		#077294 26.03%,
+		rgba(34, 196, 218, 0.31) 102.79%
+	);
+
+	color: white;
+
+	text-decoration: none;
+	border-radius: 50px;
 }
