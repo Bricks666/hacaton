@@ -33,6 +33,14 @@ export const Navigation = (props) => {
             <SubNavItem className={NavStyle.subNavItem} to="/">Иное</SubNavItem>
           </SubNavigation>
         </li>
+        <li className={NavStyle.item}>
+          Чем заняться
+          <SubNavigation className={NavStyle.subNav}>
+          <SubNavItem className={NavStyle.subNavItem} to="/">Можно почитать</SubNavItem>
+          <SubNavItem className={NavStyle.subNavItem} to="/">Можно поиграть</SubNavItem>
+          <SubNavItem className={NavStyle.subNavItem} to="/">Можно поплакать(Очень рекомендую)</SubNavItem>
+          </SubNavigation>
+        </li>
       </ul>
     </nav>
 
