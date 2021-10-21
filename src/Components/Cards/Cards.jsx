@@ -1,60 +1,74 @@
-import React from "react";
+import React, {useState} from "react";
 import MyStyle from "./Cards.module.css";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Card = (props) => {
-	return (
-		<li className={MyStyle.MyCard}>
-			<Link to={props.Link} className={MyStyle.MyCardDescription}>
-				{props.children}
-			</Link>
-		</li>
-	);
+
+    return (
+        <li className={MyStyle.MyCard} style={{background: `url(` + props.img + `) no-repeat center top/cover`}}>
+            <Link to={props.to} className={MyStyle.MyCardDescription}>
+                {props.children}
+            </Link>
+        </li>
+    );
 };
 
-const Cards = () => {
-	return (
-		<ul className={MyStyle.wrapper}>
-			<Card
-				children="Карточка"
-				Link="https://www.google.com/maps/@54.5133512,36.2651914,3a,75y,94.97h,90t/data=!3m7!1e1!3m5!1sLHDFlzKUpes8q3DRwh3hGA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DLHDFlzKUpes8q3DRwh3hGA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D98.51453%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!5m1!1e1?hl=ru-RU"
-			/>
-			<Card
-				children="Карточка"
-				Link="https://www.google.com/maps/@54.5133512,36.2651914,3a,75y,94.97h,90t/data=!3m7!1e1!3m5!1sLHDFlzKUpes8q3DRwh3hGA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DLHDFlzKUpes8q3DRwh3hGA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D98.51453%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!5m1!1e1?hl=ru-RU"
-			/>
-			<Card
-				children="Карточка"
-				Link="https://www.google.com/maps/@54.5133512,36.2651914,3a,75y,94.97h,90t/data=!3m7!1e1!3m5!1sLHDFlzKUpes8q3DRwh3hGA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DLHDFlzKUpes8q3DRwh3hGA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D98.51453%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!5m1!1e1?hl=ru-RU"
-			/>
+const Cards = (props) => {
 
-			<Card
-				children="Карточка"
-				Link="https://www.google.com/maps/@54.5133512,36.2651914,3a,75y,94.97h,90t/data=!3m7!1e1!3m5!1sLHDFlzKUpes8q3DRwh3hGA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DLHDFlzKUpes8q3DRwh3hGA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D98.51453%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!5m1!1e1?hl=ru-RU"
-			/>
-			<Card
-				children="Карточка"
-				Link="https://www.google.com/maps/@54.5133512,36.2651914,3a,75y,94.97h,90t/data=!3m7!1e1!3m5!1sLHDFlzKUpes8q3DRwh3hGA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DLHDFlzKUpes8q3DRwh3hGA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D98.51453%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!5m1!1e1?hl=ru-RU"
-			/>
-			<Card
-				children="Карточка"
-				Link="https://www.google.com/maps/@54.5133512,36.2651914,3a,75y,94.97h,90t/data=!3m7!1e1!3m5!1sLHDFlzKUpes8q3DRwh3hGA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DLHDFlzKUpes8q3DRwh3hGA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D98.51453%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!5m1!1e1?hl=ru-RU"
-			/>
+    const [cardArray, setCardArray] = useState([
+        {
+            Text: 'Card Text',
+            Img: 'https://chudo-udo.info/media/k2/items/cache/f01ce502715837920e87942116372980_XL.jpg',
+            to: '/KalugaCard'
+        },
+        {
+            Text: 'Card Text',
+            Img: 'https://static.tonkosti.ru/tonkosti/table_img/g192/9696/263193426.jpg',
+            to: '/KalugaCard'
+        },
+        {
+            Text: 'Card Text',
+            Img: 'https://www.gazprom.ru/f/posts/94/186829/kaluga-03_novyj_razmer.jpg',
+            to: '/KalugaCard'
+        },
+        {
+            Text: 'Card Text',
+            Img: 'https://lh3.googleusercontent.com/proxy/FF-q1-vV0v1slJAZn1b36oxPTm3e57j8GKuXo6giWoFDu2On-hPxAWQJ4DR4s28LmCa5KASMS3Lk39COSDWxbglcUZwwQ5A4dd-Jyc218Z65FY4_vqOEmen2JOIgRw',
+            to: '/KalugaCard'
+        },
+        {
+            Text: 'Card Text',
+            Img: 'https://static.mk.ru/upload/entities/2018/11/26/articles/detailPicture/89/a4/92/5a/4705823d4ce1e370b65114354c1d377f.jpg',
+            to: '/KalugaCard'
+        },
+        {
+            Text: 'Card Text',
+            Img: 'data:image/jpeg;base64,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',
+            to: '/KalugaCard'
+        },
+        {
+            Text: 'Card Text',
+            Img: 'https://static.mk.ru/upload/entities/2019/07/16/12/articles/detailPicture/f2/57/a9/fb/113880462f21711cc9908847eac7d4e6.jpg',
+            to: '/KalugaCard'
+        },
+        {
+            Text: 'Card Text',
+            Img: 'https://region.center/source/KALUGA2/%D0%9A%D0%B0%D0%BB%D1%83%D0%B3%D0%B0/kaluga-s02.jpg',
+            to: '/KalugaCard'
+        },
+        {
+            Text: 'Card Text',
+            Img: 'https://mcdn.tvzvezda.ru/storage/news_other_images/2020/01/08/053a0dfea4e24d2796ce14b942796f4b.jpg',
+            to: '/KalugaCard'
+        },
+    ])
 
-			<Card
-				children="Карточка"
-				Link="https://www.google.com/maps/@54.5133512,36.2651914,3a,75y,94.97h,90t/data=!3m7!1e1!3m5!1sLHDFlzKUpes8q3DRwh3hGA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DLHDFlzKUpes8q3DRwh3hGA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D98.51453%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!5m1!1e1?hl=ru-RU"
-			/>
-			<Card
-				children="Карточка"
-				Link="https://www.google.com/maps/@54.5133512,36.2651914,3a,75y,94.97h,90t/data=!3m7!1e1!3m5!1sLHDFlzKUpes8q3DRwh3hGA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DLHDFlzKUpes8q3DRwh3hGA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D98.51453%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!5m1!1e1?hl=ru-RU"
-			/>
-			<Card
-				children="Карточка"
-				Link="https://www.google.com/maps/@54.5133512,36.2651914,3a,75y,94.97h,90t/data=!3m7!1e1!3m5!1sLHDFlzKUpes8q3DRwh3hGA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DLHDFlzKUpes8q3DRwh3hGA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D98.51453%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!5m1!1e1?hl=ru-RU"
-			/>
-		</ul>
-	);
+    return (
+        <ul className={MyStyle.wrapper}>
+            {cardArray.map((e) =>
+                <Card children={e.Text} img={e.Img} to={e.to} />)}
+        </ul>
+    );
 };
 
 export default Cards;
