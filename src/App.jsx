@@ -5,6 +5,7 @@ import { Footer } from "./Components/Footer/Footer";
 import { CityContext } from "./CityContext";
 
 import "./App.css";
+import {useState} from "react";
 
 const cities = {
 	currentCity: { name: "Калуга", location: { lat: 54.32, lng: 36.16 } },
@@ -21,6 +22,7 @@ const cities = {
 };
 
 function App() {
+
 	return (
 		<Router>
 			<CityContext.Provider value={cities}>
