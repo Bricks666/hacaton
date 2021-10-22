@@ -4,6 +4,8 @@
 	box-sizing: border-box;
 
 	--grey: #d8d8d8;
+
+  scroll-behavior: smooth;
 }
 
 ul {

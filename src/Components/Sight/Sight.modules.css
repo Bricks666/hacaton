@@ -1,0 +1,67 @@
+/* WRAPPER */
+.wrapper {
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+
+  padding: 0 140px;
+}
+
+/* HEADER */
+.header {
+  grid-column: 1/-1;
+  margin-bottom: 200px;
+
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1.2em;;
+
+}
+
+/* DESCRIPTION */
+.description {
+  grid-column: 1/-1;
+  margin-bottom: 80px;
+
+  font-size: 24px;
+  line-height: 1.2em;
+  text-align: justify;
+}
+
+/* SLIDER */
+.slider {
+  grid-column: 1/-1;
+  margin-bottom: 80px;
+}
+
+/* MAP */
+.map {
+  width: 500px;
+  height: 400px;
+}
+
+/* LINK */
+.link {
+  display: inline-block;
+  padding: 5px 20px;
+
+  color: whitesmoke;
+
+  text-decoration: none;
+
+}
+
+/* CONTACTS */
+.contacts {
+  display: grid;
+  row-gap: 20px;
+
+  padding: 5px 15px;
+
+  background-color: lightgray;
+}
+
+/* SIMILAR */
+.similar {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}

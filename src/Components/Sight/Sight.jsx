@@ -4,17 +4,19 @@ import { SimilarSight } from "./SimilarSight/SimilarSight"
 import { Slider } from "./Slider/Slider"
 import { Link } from "react-router-dom"
 
+import SightStyle from './Sight.module.css'
+
 export const Sight = (props) => {
   return (
-    <section>
-      <h2>{props.name}</h2>
-      <Slider photos={props.photos}/>
-      <p>{props.description}</p>
-      <Map header={"Объект на карте"}>
-        <Link>Дополненная реальность</Link>
+    <section className={SightStyle.wrapper}>
+      <h2 className={SightStyle.header}>{props.name}</h2>
+      <Slider className={SightStyle.slider} photos={props.photos}/>
+      <p className={SightStyle.description}>{props.description}</p>
+      <Map className={SightStyle.map} header={"Объект на карте"}>
+        <Link className={SightStyle.link}>Дополненная реальность</Link>
       </Map>
-      <SightContacts contacts={props.contacts}/>
-      <SimilarSight sights={props.sights} />
+      <SightContacts className={SightStyle.contacts} contacts={props.contacts}/>
+      <SimilarSight className={SightStyle.similar} sights={props.sights} />
     </section>
   )
 }

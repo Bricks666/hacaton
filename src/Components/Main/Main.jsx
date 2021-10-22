@@ -4,12 +4,13 @@ import { MainCards } from "../Cards/MainCards/MainCards";
 import Cards from "../Shared/Cards/Cards";
 import { Container } from "../Shared/Container/Container";
 import { Map } from "../Shared/Map/Map";
+import { Slider } from "../Sight/Slider/Slider";
 
 import MainStyle from "./Main.module.css";
 
 export const Main = (props) => {
 	return (
-		<main>
+		<main id="main">
 			<Container>
 				<Switch>
 					<Route exact path="/">
@@ -19,8 +20,14 @@ export const Main = (props) => {
           <Route exact path="/sightsides">
             <Cards header={"Все достопримечательности"} Card={Card}/>
           </Route>
-          <Route exact path="/sightsude/:id">
-
+          <Route exact path="/sightsides/:id">
+            <Slider photos={["/fakephoto.jpg",
+              "/fakephoto.jpg",
+              "/fakephoto.jpg",
+              "/fakephoto.jpg",
+              "/fakephoto.jpg",
+              "/fakephoto.jpg",
+              "/fakephoto.jpg"]}/>
           </Route>
 				</Switch>
 			</Container>

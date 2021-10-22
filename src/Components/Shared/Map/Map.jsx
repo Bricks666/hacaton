@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
-import { Marker } from "./Marker/Marker";
 import GoogleMap from "google-map-react";
 
 import MapStyle from "./Map.module.css";
 import { useCityContext } from "../../../CityContext";
 
 const createMapOptions = (maps) => {
+  console.log(maps);
 	return {
-		streetViewControlOptions: {
-      position: maps.ControlPosition.LEFT_TOP
+    streetViewControl: true,
+    streetViewControlOptions: {
+      position: maps.ControlPosition.LEFT_TOP,
     },
-		fullscreenControl: false,
-		streetViewControl: true,
     streetView: true
 	};
 };
