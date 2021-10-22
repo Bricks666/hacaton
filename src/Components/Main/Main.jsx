@@ -9,6 +9,7 @@ import { Slider } from "../Sight/Slider/Slider";
 import MainStyle from "./Main.module.css";
 
 export const Main = (props) => {
+
 	return (
 		<main id="main">
 			<Container>
@@ -19,6 +20,13 @@ export const Main = (props) => {
 					</Route>
           <Route exact path="/sightsides">
             <Cards header={"Все достопримечательности"} Card={Card}/>
+              <Slider photos={["/fakephoto.jpg",
+                  "/CardDescription.jpg",
+                  "/fakephoto.jpg",
+                  "/fakephoto.jpg",
+                  "/fakephoto.jpg",
+                  "/20200306-cara-post.jpg",
+                  "/fakephoto.jpg"]}/>
           </Route>
           <Route exact path="/sightsides/:id">
             <Slider photos={["/fakephoto.jpg",
