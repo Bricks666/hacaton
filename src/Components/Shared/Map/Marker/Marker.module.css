@@ -6,7 +6,7 @@
 	height: 50px;
 
 	border-radius: 50%;
-	border: 8px solid blueviolet;
+	border: 8px solid #22C4DA;
 	background-color: whitesmoke;
 }
 
@@ -28,16 +28,16 @@
 	background-image: linear-gradient(
 			to right top,
 			transparent 48%,
-			blueviolet 48%,
-			blueviolet calc(48% + 8px),
+			#22C4DA 48%,
+			#22C4DA calc(48% + 8px),
 			whitesmoke 50%,
 			whitesmoke 100%
 		),
 		linear-gradient(
 			to left top,
 			transparent 48%,
-			blueviolet 48%,
-			blueviolet calc(48% + 8px),
+			#22C4DA 48%,
+			#22C4DA calc(48% + 8px),
 			whitesmoke 50%,
 			whitesmoke 100%
 		);

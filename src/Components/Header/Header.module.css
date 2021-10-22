@@ -2,7 +2,7 @@
 .header {
 	display: grid;
 
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	align-items: center;
 	row-gap: 10px;
 
@@ -39,4 +39,9 @@
 .headerAbout {
 	grid-row: 2;
 	grid-column: 1 / -1;
+}
+
+/* CITIES */
+.cities {
+	max-width: min-content;
 }

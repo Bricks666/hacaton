@@ -5,6 +5,7 @@ import { HeaderAbout } from "./HeaderAbout/HeaderAbout";
 
 import HeaderStyle from "./Header.module.css";
 import { Container } from "../Shared/Container/Container";
+import { City } from "./City/City";
 
 export const Header = (props) => {
 	return (
@@ -12,6 +13,7 @@ export const Header = (props) => {
 			<Container className={HeaderStyle.container}>
 				<Logo className={HeaderStyle.picture} />
 				<Navigation className={HeaderStyle.nav} />
+				<City className={HeaderStyle.cities} />
 				<Search className={HeaderStyle.search} />
 				<HeaderAbout className={HeaderStyle.headerAbout} />
 			</Container>
