@@ -1,4 +1,6 @@
 import { useState } from "react";
+import {Picture} from '../../../Shared/Picture/Picture'
+
 import MarkerStyle from "./Marker.module.css";
 
 export const Marker = (props) => {
@@ -13,7 +15,7 @@ export const Marker = (props) => {
 			}`}
 			onClick={() => toggleShow(showCard)}
 		>
-			{props.children}
+			<Picture className={MarkerStyle.icon} src="/fakephoto.jpg"/>
 		</div>
 	);
 };

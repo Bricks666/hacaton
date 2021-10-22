@@ -1,0 +1,22 @@
+/* MORE */
+
+.more {
+
+  display: block;
+
+	margin-left: auto;
+	padding: 10px 20px;
+
+  max-width: max-content;
+
+	background-image: linear-gradient(
+		93.75deg,
+		#077294 26.03%,
+		rgba(34, 196, 218, 0.31) 102.79%
+	);
+
+	color: white;
+
+	text-decoration: none;
+	border-radius: 50px;
+}

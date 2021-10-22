@@ -7,14 +7,17 @@ import { useCityContext } from "../../../CityContext";
 
 const createMapOptions = (maps) => {
 	return {
-		streetViewControlOptions: {},
+		streetViewControlOptions: {
+      position: maps.ControlPosition.LEFT_TOP
+    },
 		fullscreenControl: false,
 		streetViewControl: true,
+    streetView: true
 	};
 };
 
 export const Map = (props) => {
-	debugger;
+
 	const cities = useCityContext();
 	const [center, setCenter] = useState(cities.currentCity.location);
 
@@ -29,22 +32,16 @@ export const Map = (props) => {
 
 	return (
 		<section className={`${MapStyle.wrapper} ${props.className ?? ""}`}>
-			<h2 className={MapStyle.header}>Посмотреть на карте</h2>
+			<h2 className={MapStyle.header}>{props.header}</h2>
 			<GoogleMap
 				center={center}
 				zoom={15}
 				options={createMapOptions}
-				hoverDistance={40}
+				hoverDistance={20}
 				onChildClick={onChildClick}
-				onChildMouseEnter={(...props) => console.log(props)}
 			>
-				<Marker lat={54.32} lng={36.14}>
-					Тестовая точка
-				</Marker>
-				<Marker lat={54.32} lng={36.18}>
-					Тестовая точка
-				</Marker>
 			</GoogleMap>
+      {props.children}
 		</section>
 	);
 };

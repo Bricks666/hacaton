@@ -1,5 +1,5 @@
 import { Container } from "../Shared/Container/Container";
-import { Contacts } from "./Contacts/Contacts";
+import { FooterContacts } from "./Contacts/FooterContacts";
 import { SocialNetworks } from "./SocialNetworks/SocialNetworks";
 
 import FooterStyle from "./Footer.module.css";
@@ -10,7 +10,7 @@ export const Footer = (props) => {
 			<Container className={FooterStyle.container}>
 				<h2 className={FooterStyle.header}>Контакты</h2>
 				<SocialNetworks />
-				<Contacts className={FooterStyle.last} />
+				<FooterContacts className={FooterStyle.last} />
 			</Container>
 		</footer>
 	);

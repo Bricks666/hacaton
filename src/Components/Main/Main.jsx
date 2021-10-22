@@ -1,5 +1,7 @@
 import { Route, Switch } from "react-router";
-import Cards from "../Cards/Cards";
+import { Card } from "../Cards/Card/Card";
+import { MainCards } from "../Cards/MainCards/MainCards";
+import Cards from "../Shared/Cards/Cards";
 import { Container } from "../Shared/Container/Container";
 import { Map } from "../Shared/Map/Map";
 
@@ -11,9 +13,15 @@ export const Main = (props) => {
 			<Container>
 				<Switch>
 					<Route exact path="/">
-						<Cards />
-						<Map className={MainStyle.map} />
+						<MainCards />
+						<Map className={MainStyle.map} header={"Посмотреть на карте"}/>
 					</Route>
+          <Route exact path="/sightsides">
+            <Cards header={"Все достопримечательности"} Card={Card}/>
+          </Route>
+          <Route exact path="/sightsude/:id">
+
+          </Route>
 				</Switch>
 			</Container>
 		</main>

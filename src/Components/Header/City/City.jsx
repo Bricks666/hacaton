@@ -1,5 +1,7 @@
 import { useCityContext } from "../../../CityContext";
 
+import CityStyle from "./City.module.css"
+
 const renderOptions = (cities) => {
 	return Object.entries(cities).map((pair) => {
 		return (
@@ -14,8 +16,8 @@ export const City = (props) => {
 	const cities = useCityContext();
 	console.log(cities);
 	return (
-		<div className={`${props.className ?? ""}`}>
-			<select onChange={(evt) => cities.changeCity(evt.target.value)}>
+		<div className={`${props.className ?? ""} ${CityStyle.wrapper}`}>
+			<select className={CityStyle.select} onChange={(evt) => cities.changeCity(evt.target.value)}>
 				{renderOptions(cities.cities)}
 			</select>
 		</div>

@@ -43,5 +43,7 @@
 
 /* CITIES */
 .cities {
-	max-width: min-content;
+	max-width: max-content;
+
+  justify-self: end;
 }

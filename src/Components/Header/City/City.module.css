@@ -1,0 +1,37 @@
+/* SELECT */
+.select {
+  position: relative;
+
+
+  font-size: 22px;
+
+  border: none;
+
+  background-color: inherit;
+
+}
+.wrapper {
+  position: relative;
+}
+
+.select::before {
+  content: "";
+
+  display: inline-block;
+
+  position: absolute;
+  top: -0.30em;
+  left: -1.5em;
+
+  width: 2em;
+  height: 2em;
+
+  background-image: url('./MapPin.svg');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.select:hover {
+  text-decoration: underline;
+}
