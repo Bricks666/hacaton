@@ -1,0 +1,15 @@
+/* WRAPPER */
+.wrapper {
+  display: grid;
+}
+
+
+/* HEADER */
+.header {
+  justify-self: center;
+
+  font-size: 35px;
+  line-height: 1.2em;
+  color: black;
+  font-weight: 400;
+}

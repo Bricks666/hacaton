@@ -1,5 +1,5 @@
 import { Route, Switch } from "react-router";
-import { Card } from "../Cards/Card/Card";
+import { Card } from "../Shared/Card/Card";
 import { MainCards } from "../Cards/MainCards/MainCards";
 import Cards from "../Shared/Cards/Cards";
 import { Container } from "../Shared/Container/Container";
