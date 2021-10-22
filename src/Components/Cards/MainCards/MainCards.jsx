@@ -6,7 +6,7 @@ import MainCardsStyle from "./MainCards.module.css"
 
 export const MainCards = (props) => {
   return(
-    <Cards header="Самые популярные достопримечательности" Card={Card}>
+    <Cards header="Самые популярные достопримечательности" Card={Card} items={props.items}>
       <Link className={MainCardsStyle.more} to="/sightsides">Подробнее</Link>
     </Cards>
   )

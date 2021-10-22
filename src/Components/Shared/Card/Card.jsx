@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import {Picture} from "../../Shared/Picture/Picture";
 
 import CardStyle from "./Card.module.css";
-import {Motion, spring} from 'react-motion';
 
 export class Card extends Component {
     constructor(props) {
@@ -18,22 +17,21 @@ export class Card extends Component {
 
     toggleShow() {
         this.setState({showAll: !this.state.showAll});
-        console.log(this.state);
     }
 
     render() {
         return (
 
 					<li
-						className={`${CardStyle.card} ${
+						className={`${CardStyle.card} ${this.props.className??""} ${
 							this.state.showAll ? CardStyle.all : CardStyle.some
-						}`}
+						} `}
 						onClick={this.toggleShow}
 					>
 						<span className={CardStyle.preWords}>Кратко</span>
 						<h3 className={CardStyle.header}>{this.props.name}</h3>
-						<Picture className={CardStyle.picture} src={this.props.img}/>
-						<p className={CardStyle.description}>{this.props.children}</p>
+						<Picture className={CardStyle.picture} src={this.props.image}/>
+						<p className={CardStyle.description}>{this.state.showAll? this.props.fullDescribe: this.props.shortDescribe}</p>
 						<Link className={CardStyle.link} to={`/sightsides/${this.props.id}`}>
 							Подробнее →
 						</Link>

@@ -187,6 +187,8 @@ for i in range(len(name_of_manument)):
 
 to_json = json.dumps(manument2, ensure_ascii=False)
 print(to_json)
+with open('sw_templates.json', 'w') as f:
+    f.write(json.dumps(to_json))
 
 # cursoring.execute("SELECT location FROM datahacaton")
 # # if cursoring.fetchone() is None:

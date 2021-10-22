@@ -8,6 +8,9 @@
 
 /* HEADER */
 .header {
+margin: 0;
+margin-bottom: 25px;
+
 	font-size: 35px;
 	line-height: 1.2em;
 	font-weight: 400;

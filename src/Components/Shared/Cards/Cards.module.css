@@ -1,4 +1,17 @@
+.section {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  row-gap: 50px;
+
+  padding-top: 50px;
+}
+
+
 .wrapper {
+  grid-column: 1 / -1;
+
 	display: grid;
 
 	grid-template-columns: repeat(3, 300px);
@@ -14,8 +27,18 @@
 
 /* HEADER */
 .header {
-	text-align: center;
+  align-self: center;
+
+  height: min-content;
+
+	text-align: left;
 	font-size: 60px;
 	line-height: 1.2em;
 	font-weight: 400;
+
+  margin: 0;
+}
+
+.picture {
+  order: -1;
 }

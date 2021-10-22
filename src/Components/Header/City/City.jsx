@@ -14,7 +14,6 @@ const renderOptions = (cities) => {
 
 export const City = (props) => {
 	const cities = useCityContext();
-	console.log(cities);
 	return (
 		<div className={`${props.className ?? ""} ${CityStyle.wrapper}`}>
 			<select className={CityStyle.select} onChange={(evt) => cities.changeCity(evt.target.value)}>

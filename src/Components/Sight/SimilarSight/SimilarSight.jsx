@@ -1,18 +1,16 @@
-import { Link } from 'react-router-dom'
-import { Card } from '../../Cards/Card/Card'
+import { Card } from '../../Shared/Card/Card'
 
 import SimilarSightStyle from './SimilarSight.module.css'
 
 export const SimilarSight = (props) => {
   return(
-    <action>
+    <article className={props.className?? ""}>
       <h3 className={SimilarSightStyle.header}>Также вы можете посмотреть</h3>
-      <ul>
+      <ul className={SimilarSightStyle.list}>
         {props.sights.map((sight) => {
-          return <Card {...sight} key={sight.id}/>
+          return <Card className={SimilarSightStyle.item} {...sight} key={sight.id}/>
         })}
       </ul>
-      <Link to="/sightsides">Показать еще достопримечательности</Link>
-    </action>
+    </article>
   )
 }

@@ -7,9 +7,24 @@
 /* HEADER */
 .header {
   justify-self: center;
+  text-align: center;
 
   font-size: 35px;
   line-height: 1.2em;
   color: black;
   font-weight: 400;
+}
+
+/* LIST */
+.list {
+  display: grid;
+
+  grid-template-columns:  repeat(3, 1fr);
+
+  column-gap: 50px;
+}
+
+/* ITEM */
+.item {
+
 }

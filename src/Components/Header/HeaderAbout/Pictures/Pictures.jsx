@@ -79,13 +79,13 @@ export const Pictures = (props) => {
 	return (
 		<article className={PicturesStyle.section}>
 			{renderPhoto(
-				"/fakephoto.jpg",
-				"/fakephoto.jpg",
-				"/fakephoto.jpg",
-				"/fakephoto.jpg",
-				"/fakephoto.jpg",
-				"/fakephoto.jpg",
-				"/fakephoto.jpg"
+				"/Государственный музей истории космонавтики.jpeg",
+				"/Шарик.jpeg",
+				"/Дом-музей А.Л. Чижевского.jpeg",
+				"/Планетарий.jpeg",
+				"/Ракета-носитель «Восток».jpeg",
+				"/Дом-музей К.Э. Циолковского.jpeg",
+				"Скульптурная композиция «Встреча Королёва и Циолковского».jpeg"
 			)}
 		</article>
 	);

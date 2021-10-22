@@ -7,6 +7,7 @@ import HeaderStyle from "./Header.module.css";
 import { Container } from "../Shared/Container/Container";
 import { City } from "./City/City";
 
+
 export const Header = (props) => {
 	return (
 		<header className={HeaderStyle.header}>

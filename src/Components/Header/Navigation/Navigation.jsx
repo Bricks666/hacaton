@@ -26,32 +26,7 @@ export const Navigation = (props) => {
 					</Link>
 				</li>
 				<li className={NavStyle.item}>
-					Что делать
-					<SubNavigation className={NavStyle.subNav}>
-						<SubNavItem className={NavStyle.subNavItem} to="/">
-							Что то
-						</SubNavItem>
-						<SubNavItem className={NavStyle.subNavItem} to="/">
-							Что то too
-						</SubNavItem>
-						<SubNavItem className={NavStyle.subNavItem} to="/">
-							Иное
-						</SubNavItem>
-					</SubNavigation>
-				</li>
-        <li className={NavStyle.item}>
-					Кто виноват
-					<SubNavigation className={NavStyle.subNav}>
-						<SubNavItem className={NavStyle.subNavItem} to="/">
-							Ты
-						</SubNavItem>
-						<SubNavItem className={NavStyle.subNavItem} to="/">
-							Ты
-						</SubNavItem>
-						<SubNavItem className={NavStyle.subNavItem} to="/">
-							Конечно не я
-						</SubNavItem>
-					</SubNavigation>
+					<Link className={NavStyle.link} to="/sightsides">Что посмотреть</Link>
 				</li>
 			</ul>
 		</nav>

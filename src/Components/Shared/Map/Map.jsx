@@ -5,7 +5,6 @@ import MapStyle from "./Map.module.css";
 import { useCityContext } from "../../../CityContext";
 
 const createMapOptions = (maps) => {
-  console.log(maps);
 	return {
     streetViewControl: true,
     streetViewControlOptions: {
@@ -26,7 +25,6 @@ export const Map = (props) => {
 
 	const onChildClick = (id, childProps) => {
 		setCenter([childProps.lat, childProps.lng]);
-		console.log(center);
 	};
 
 	return (

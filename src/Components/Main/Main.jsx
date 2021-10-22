@@ -4,9 +4,13 @@ import { MainCards } from "../Cards/MainCards/MainCards";
 import Cards from "../Shared/Cards/Cards";
 import { Container } from "../Shared/Container/Container";
 import { Map } from "../Shared/Map/Map";
-import { Slider } from "../Sight/Slider/Slider";
+import { SightWithRouter } from '../Sight/Sight'
 
 import MainStyle from "./Main.module.css";
+import data from '../../sw_templates.json'
+import { toValidCard } from "../../toValidCard";
+
+const cardArray = Object.values(JSON.parse(data)).map(toValidCard)
 
 export const Main = (props) => {
 
@@ -15,27 +19,14 @@ export const Main = (props) => {
 			<Container>
 				<Switch>
 					<Route exact path="/">
-						<MainCards />
+						<MainCards items={cardArray} />
 						<Map className={MainStyle.map} header={"Посмотреть на карте"}/>
 					</Route>
           <Route exact path="/sightsides">
-            <Cards header={"Все достопримечательности"} Card={Card}/>
-              <Slider photos={["/fakephoto.jpg",
-                  "/CardDescription.jpg",
-                  "/fakephoto.jpg",
-                  "/fakephoto.jpg",
-                  "/fakephoto.jpg",
-                  "/20200306-cara-post.jpg",
-                  "/fakephoto.jpg"]}/>
+            <Cards header={"Все списки достопримечательностей в Калуге"} Card={Card} items={cardArray}/>
           </Route>
           <Route exact path="/sightsides/:id">
-            <Slider photos={["/fakephoto.jpg",
-              "/fakephoto.jpg",
-              "/fakephoto.jpg",
-              "/fakephoto.jpg",
-              "/fakephoto.jpg",
-              "/fakephoto.jpg",
-              "/fakephoto.jpg"]}/>
+          <SightWithRouter sights={cardArray}/>
           </Route>
 				</Switch>
 			</Container>
