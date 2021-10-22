@@ -1,0 +1,40 @@
+/* WRAPPER */
+.wrapper {
+	display: grid;
+}
+
+/* HEADER */
+.header {
+	font-size: 20px;
+	line-height: 1.2em;
+	font-weight: 400;
+	color: inherit;
+}
+
+/* LIST */
+.list {
+	display: grid;
+	grid-template-columns: repeat(2, max-content);
+
+  column-gap: 5px;
+  row-gap: 14px;
+}
+
+/* TERM */
+.term {
+
+}
+
+/* DESCRIPTION */
+.description {
+  margin: 0;
+  padding: 0;
+}
+
+/* LINK */
+.link {
+  color: tomato;
+}
+.link:hover {
+  color: red;
+}

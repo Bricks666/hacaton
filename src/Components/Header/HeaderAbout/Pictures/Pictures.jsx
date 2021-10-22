@@ -1,5 +1,4 @@
 import { Picture } from "../../../Shared/Picture/Picture";
-import { Container } from "../../../Shared/Container/Container";
 
 import PicturesStyle from "./Pictures.module.css";
 

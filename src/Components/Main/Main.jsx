@@ -3,6 +3,8 @@ import Cards from "../Cards/Cards";
 import { Container } from "../Shared/Container/Container";
 import { Map } from "../Shared/Map/Map";
 
+import MainStyle from "./Main.module.css";
+
 export const Main = (props) => {
 	return (
 		<main>
@@ -10,7 +12,7 @@ export const Main = (props) => {
 				<Switch>
 					<Route exact path="/">
 						<Cards />
-						<Map />
+						<Map className={MainStyle.map} />
 					</Route>
 				</Switch>
 			</Container>
